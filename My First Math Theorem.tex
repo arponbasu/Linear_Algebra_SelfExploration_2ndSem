@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\R}{\mathbb{R}}
+\usepackage[utf8]{inputenc}
+
+\title{My First Math Theorem}
+\author{Arpon Basu\\Vedang Asgaonkar}
+\date{May 2021}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Theorem}
+Prove that $\forall$ $A$ $\in$ $\mathbb{K}^{n\times n}$ $\exists$ $X$ $\in$ $\mathbb{K}^{n\times n}$ such that $AX$ = $\textbf{O}$ and $X$ has atmost \\
+$n\cdot$ rank $A$ zeroes in it.\\
+A statement differing from the above only in the order of multiplication of the two matrices still holds, ie:- $\forall$ $A$ $\in$ $\mathbb{K}^{n\times n}$ $\exists$ $Y$ $\in$ $\mathbb{K}^{n\times n}$ such that $YA$ = $\textbf{O}$ and $Y$ has atmost $n\cdot$ rank $A$ zeroes in it. 
+
+\section{Proof}
+Note that if $A$ is an invertible matrix, then $X = Y = \textbf{O}$ does the job for us.\\
+If not, then for any $n\times n$ (non invertible) matrix $A$ with rank $r \geq 1$, we have $(n - r)$ ``basic" solutions of the equation $A\textbf{x} = \textbf{O}$, $\textbf{x} \in \mathbb{K}^{n\times 1}$, ie:- column vectors whose entries are 1 at the position of any one of the $(n - r)$ non-pivotal variable(s) and zero at the rest of the non-pivotal variables, while the pivotal variables are determined by back substitution. Thus, by taking a linear combination (with all coefficients non-zero) of all the the basic solutions of the matrix, one can generate a new column vector which is a solution of $A\textbf{x} = \textbf{O}$ and all it's non-pivotal entries are non-zero, ie:- it has at most $r$ zero entries in it. Stack that column vector together side by side, with itself, $n$ times to get a $n\times n$ matrix $X$ such that $AX$ = $\textbf{O}$ and $X$ has atmost $n\cdot$ $r$ zeroes in it.\\
+And as for the second part of the statement, we know $\exists$ $X'$ $\in$ $\mathbb{K}^{n\times n}$ such that $A^{T}X'$ = $\textbf{O}$ and $X'$ has atmost $n\cdot$ rank $A^{T}$ zeroes in it. Since rank $A^{T}$ = rank $A$, and $(A^{T}X')^{T}$ = $(X')^{T}A$ = $\textbf{O}$, we get that $Y$ = $(X')^{T}$ satisfies all the desired properties.\\
+Hence proved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{plain}
+
+\end{document}
+We define a function $f:\mathbb{K}^{n\times n}\rightarrow\mathbb{Z}$, $n\in \mathbb{N}$, which maps any matrix $A$ (in $\mathbb{K}^{n\times n}$) to the number of non-zero entries in $A$. Thus, for example, $f(\textbf{I})$ = $n$, $f(\textbf{O})$ = $0$
