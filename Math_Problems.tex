@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Math Problems}
+\author{Arpon Basu}
+\date{May 2021}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Vasooli}
+Suppose we have $n$ people in a room, some of whom have borrowed and/or lent money to each other. At the end of the year, all of them want to clear their dues and/or want their money back.\\
+However, they're on very bad personal terms with each other, and are unable to complete transactions with each other in a civilized manner. So, they approach a court.\\
+The court announces the following procedure for clearing dues:-\\
+\begin{enumerate}
+   \item All people have to first file claims with the court. For example, if $A$ has borrowed 1,000 \$  from $B$, then $B$ files a claim of 1,000 \$ vis-a-vis $A$, while $A$ files a claim of \textbf{-}1,000 \$ vis-a-vis $B$.
+   
+   \item Then, everybody is asked to announce their interest rates. From the above example, say $A$ announces (an interest rate of) 8 \%, $B$ announces 5 \%, and so on.
+   
+   \item Then an account sheet is made as follows:
+        1 + $5\%$ = 1.05; $1.05\times(-1000 \$)$ is added to the account sheet of $A$, while $1.08\times(+1000 \$)$ is added to the account sheet of $B$. \textbf{Note that the amount deducted from $A$'s account sheet is dictated by the interest rate of $B$, and vice versa}.
+    
+    \item The above procedure is carried out for all the claims filed in court.
+    
+    \item Finally, to prevent exploitation, the court divides the total amount on a person's account sheet by (1 + That person's interest rate). Thus, for example, if $A$ finally has 21,600 \$ written on her account sheet, then she is \textbf{actually paid only $\frac{21600}{1 + 0.08} = 20,000$ \$ by the court.}
+    
+    \item We also fix the convention that everybody gets paid by the court. Thus, even if a person, say $X$, is \textbf{asked to pay}, say 3,000 \$, by the court, we still say that $X$ \textbf{was paid - 3,000 \$ by the court.}
+\end{enumerate}
+ Prove that it is \textbf{impossible}, no matter what the borrowed/lent amounts and the interest rates are, that at the end of the above arbitration, everybody would've been paid the same \textbf{non-zero} amount by the court, ie:- either people will get paid unequal sums of money, or everybody would get paid exactly zero.
+
+
+\section{Children in the Park}
+Say we have $n$ children in a school. They form groups with each other, of various sizes, in such a way that no child is left alone, ie:- every group has size at-least 2. Then all of these children go to a park, where they have to sit around circular tables. Note that both the order and sense of of the seating arrangements matter, ie:- 1-2-3-4-1, 1-3-2-4-1, 1-4-3-2-1, are to be considered distinct seating arrangements.\\
+Find the number of ways this whole thing can be orchestrated, ie:- breaking up into groups and then their seating arrangement around circles. Your answer will obviously be a function of $n$, say $f(n)$.\\
+\textbf{Example:-} If we have 4 children, say $A$, $B$, $C$, $D$, then the breaking down into groups can only be 2 + 2, or all 4 together, as shown below:\\ $[((A,B),(C,D)),((A,C),(B,D)),((A,D),(B,C)),(A,B,C,D)]$. In the 2 + 2 case, seating arrangement, even considering clockwise and anti-clockwise to be separate, can still be done in a unique way. In the case where everybody is together, seating can be done in 6 ways (fix anybody and permute the rest). Thus \textbf{$f(4)$ is equal to $3 + 6 = 9$}.
+
+
+\section{Hints}
+\subsection{Vasooli}
+Express the total money owed by the people to each other in a $n \times n$ matrix $A = [a_{ij}]$ in such a way that $a_{ij}$ represents the money owed by the $j^{th}$ person to the $i^{th}$ person. Clearly $A$ is a skew symmetric matrix, and representing the interest rates as a column vector of length $n$, it's easy to see that the problem statement basically says that a skew symmetric matrix can't have a non-zero real eigenvalue.
+\subsection{Children in the Park}
+The number of ways has a direct bijection with the number of derangements of set of size $n$. The answer is thus $D_{n} = \left \lfloor {\frac{n!}{e}+\frac{1}{2}}\right \rfloor$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{plain}
+%\bibliography{references}
+\end{document}
