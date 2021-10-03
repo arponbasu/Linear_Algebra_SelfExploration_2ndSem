@@ -1,0 +1,35 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+
+
+\begin{document}
+ 
+ Arpon Basu , School: AECS-4 , Mumbai-400094\\
+ 
+ Solution for Problem J376 \\
+
+
+
+
+
+
+ $\frac{1}{5-4\cos\alpha}+\frac{1}{5-4\cos\beta}+\frac{1}{5-4\cos\gamma}=\frac{1}{1+4(1-\cos\alpha)}+\frac{1}{1+4(1-\cos\beta)}+\frac{1}{1+4(1-\cos\gamma)}=\frac{3+8\Sigma (1-\cos\alpha)+16\Sigma (1-\cos\alpha)(1-\cos\beta)}{1+4\Sigma (1-\cos\alpha)+16\Sigma (1-\cos\alpha)(1-\cos\beta)+64\Pi (1-\cos\alpha)}$\\
+Thus the statement to be proved is $\frac{3+8\Sigma (1-\cos\alpha)+16\Sigma (1-\cos\alpha)(1-\cos\beta)}{1+4\Sigma (1-\cos\alpha)+16\Sigma (1-\cos\alpha)(1-\cos\beta)+64\Pi (1-\cos\alpha)}\geq 1$.\\
+Multiplying both sides by the denominator and simplifying we get:-\\
+$2+4\Sigma (1-\cos\alpha)\geq 64\Pi (1-\cos\alpha)\Rightarrow 1+2\Sigma (1-\cos\alpha)\geq 32\Pi (1-\cos\alpha)$\\
+Now,using the inequality $\Sigma \cos\alpha \leq \frac{3}{2}$ if $\alpha$, $\beta$ and $\gamma$ are angles of a triangle,we get that:-\\
+$\Sigma (1-\cos\alpha)=3-\Sigma \cos\alpha \geq 3-\frac{3}{2}=\frac{3}{2}\Rightarrow 1+2\Sigma (1-\cos\alpha)\geq 4$.Thus if we can prove that $4\geq 32\Pi (1-\cos\alpha)\Rightarrow \frac{1}{8}\geq \Pi (1-\cos\alpha)$ then we're done.\\
+We note that $(1-\cos\alpha)=2\sin^{2} \frac{\alpha}{2}\Rightarrow \Pi (1-\cos\alpha)=8(\Pi \sin(\frac{\alpha}{2}))^{2}$ implies that $\frac{1}{8}\geq \Pi (1-\cos\alpha) \Rightarrow \frac{1}{64}\geq (\Pi \sin(\frac{\alpha}{2}))^{2}\Rightarrow \frac{1}{8}\geq \Pi \sin(\frac{\alpha}{2})$.\\
+Finally,using the fact that $\Pi \sin(\frac{\alpha}{2})=\frac{r}{4R}$,where $r$ and $R$ denote the inradius and circumradius of the triangle respectively,we get that the statement to be proved is $\frac{r}{4R}\leq \frac{1}{8}\Rightarrow 2r\leq R$,which is obviously true.\\
+Note that in both the inequalities $\Sigma \cos\alpha \leq \frac{3}{2}$ and $R\geq 2r$ used for proving our result,equality holds iff $\alpha=\beta=\gamma=\frac{\pi}{3}$,and hence:-\\
+\emph{$\frac{1}{5-4\cos\alpha}+\frac{1}{5-4\cos\beta}+\frac{1}{5-4\cos\gamma}\geq 1$,if $\alpha$, $\beta$ and $\gamma$ are angles of a triangle.Equality holds iff $\alpha=\beta=\gamma=\frac{\pi}{3}$.}\\
+
+
+
+
+
+
+
+
+\end{document}

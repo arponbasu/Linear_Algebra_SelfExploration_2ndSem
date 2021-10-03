@@ -1,0 +1,65 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu,School: AECS-4,Mumbai-400094
+
+Solution for problem O435
+\end{center}
+
+
+We observe that if $a=\frac{x}{y+z}$ , $b=\frac{y}{z+x}$ , $c=\frac{z}{x+y}$ for some $x,y,z \in R_{\ge 0}$ , then the condition
+$ab+bc+ca+2abc=1$ is satisfied.we also note that the mapping $(a,b,c) \mapsto (x,y,z)$ is bijective.\\
+Thus
+
+$$\sum_{cyclic} \frac{1}{8a^2 +1} = \sum_{cyclic} \frac{1}{8(\frac{x}{y+z})^2 +1}  = \sum_{cyclic} \frac{(y+z)^2}{8x^2 + (y+z)^2} $$
+
+Since the above expression is homogeneous in $(x,y,z)$ , we put $x+y+z=1$ and consequently $x,y,z \in (0,1)$ to get 
+
+$$E(x,y,z)= \sum_{cyclic} \frac{(1-x)^2}{8x^2 + (1-x)^2} =  \sum_{cyclic} \frac{x^2 -2x+1}{9x^2 -2x+1} $$
+
+We thus ahve to minimize $E$ under $g: x+y+z-1=0$. Thus by Lagrange multipliers,
+
+  $$\mathcal{L}(x,y,z,\lambda)=E(x,y,z)-\lambda g(x,y,z) $$
+
+
+
+\begin{align*}
+ &\nabla_{x,y,z,\lambda} \mathcal{L}=0 \\
+ &\therefore \lambda = \frac{16x(x-1)}{(9x^2 -2x+1)^2}=\frac{16y(y-1)}{(9y^2 -2y+1)^2}=\frac{16z(z-1)}{(9z^2 -2x+1)^2}
+\end{align*}
+
+let 
+
+\begin{align*}
+ & f(r)=\frac{16r(r-1)}{(9r^2 -2r+1)^2} \\
+ & \therefore f(x)=f(y)=f(z)=\lambda
+\end{align*}
+
+Now, $f^{'}(x)$ changes sign exactly one in $(0,1)$. Thus any line $y=\lambda $ can intersect $y=f(x)$ ( for $x\in(0,1)$) atmost twice. 
+Hence $(x,y,z)$ can contain atmost two distinct numbers.\\
+Thus the unordered triplet $(x,y,z)$ staisfying $f(x)=f(y)=f(z)$ is of the form $(\alpha,\alpha,1-2\alpha)$.
+
+$$ \therefore f(\alpha)=f(1-2\alpha) $$
+
+\begin{equation}
+  \Rightarrow \frac{16\alpha(\alpha-1)}{(9\alpha^2 -2\alpha+1)^2}=\frac{16(1-2\alpha)(-2\alpha)}{(9(1-2\alpha)^2-2(1-2\alpha)+1)^2}
+\end{equation}
+
+  Solving equation 1 with Wolfram Alpha we get $\alpha = \frac{1}{3}, 0.474119$ (Note that $\alpha \in (0,1)$). Actually evaluating 
+  $E(x,y,z) $ for $(\frac{1}{3},\frac{1}{3},\frac{1}{3})$ and $(\alpha_{0},\alpha_{0},1-2\alpha_{0})= 8.7033     >1$
+  
+  Thus $E(x,y,z)$ attains its global minima on the plane $x+y+z=1$ at  $(\frac{1}{3},\frac{1}{3},\frac{1}{3})$ at that point its value is $1$.
+  
+  $$\therefore E(x,y,z) \ge 1 $$
+\begin{align*}
+ & \therefore E(x,y,z) \ge 1 \\
+ & \Rightarrow \frac{1}{8a^2+1} + \frac{1}{8b^2+1}+\frac{1}{8c^2+1} \ge 1 &\ \text{with equality} &\ a=b=c=\frac{1}{2}
+\end{align*}
+
+\end{document}

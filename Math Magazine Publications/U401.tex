@@ -1,0 +1,36 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu, School: AECS-4 , Mumbai-400094
+
+Solution for problem U401
+\end{center}
+
+We know that $p(x)=\frac{1}{x^2}$ for $x \in \{1,2,\dots , n+1\}$
+we define $g(x)=x^2p(x)-1$. As degree of $g(x)$ is $(n+2)$ so it has $(n+2)$ roots.\\
+$$g(x)=x^2p(x)-1= x^2\frac{1}{x^2} -1 =0 , \forall x\in \{1,2,\dots , n+1\}$$ 
+$\therefore (n+1) $ roots of $g(x)$ are $ \{1,2,\dots , n+1\} $.
+$$\therefore g(x)=(x-1)(x-2) \dots (x-(n+1))(x-\alpha) $$
+$$\Rightarrow g(0)=(-1)^{n+1}(n+1)!(-\alpha) $$
+$$\Rightarrow 0^2p(0)-1 =(-1)^{n+2}(n+1)!(\alpha) $$
+$$\Rightarrow (-1)^{n+2}(n+1)!(\alpha)=-1 $$
+$$ \alpha =\frac{(-1)^{n+1}}{(n+1)!} $$
+
+$$ \therefore g(n+2)=\big((n+2)-1\big)\big((n+2)-2\big) \dots \big((n+2)-(n+1)\big)\Big((n+2)-\frac{(-1)^{n+1}}{(n+1)!}\Big) $$
+$$ =(n+1)! \big (\frac{(n+2)!-(-1)^{n+1}}{(n+1)!} \big ) = (n+2)! + (-1)^{n+2} $$
+$$ \therefore (n+2)^2 p(n+2) -1 =(n+2)! + (-1)^{n+2}  $$ 
+
+$$ \therefore p(n+2)=\dfrac{(n+2)! + (-1)^{n+2}+1}{(n+2)^2}$$
+
+Author wishes to thank his senior Adnan Ali for a fruitful conversation on the problem.
+
+
+\end{document}
+
+

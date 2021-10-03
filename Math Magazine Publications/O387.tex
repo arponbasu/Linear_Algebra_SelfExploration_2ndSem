@@ -1,0 +1,15 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+
+
+\begin{document}
+Arpon Basu, School: AECS-4 , Mumbai-400094\\
+Solution for Problem O387 \\
+We check the modulo 7 of the expression $3^{(6n-3)} + 3^{(3n-1)} + 1 $. \\
+$3^{(6n-3)} = 3^{3(2n-1)}=27^{(2n-1)} \equiv (-1)^{(2n-1)} \equiv -1 (\textrm{mod}\ 7) $ \\
+$3^{(3n-1)} =(9)(3^{3n-3)})=(9)27^{(n-1)} \equiv (9)(-1)^{(n-1)} \equiv (2)(-1)^{(n-1)} (\textrm{mod}\ 7) $ \\
+$3^{(6n-3)} + 3^{(3n-1)} + 1  \equiv (-1+(2)(-1)^{(n-1)}+1) (\textrm{mod}\ 7) \equiv (2)(-1)^{(n-1)} (\textrm{mod}\ 7) \equiv 2,5 (\textrm{mod}\ 7) $ \\
+But cubic residude modulo 7 is ${0,1,6}$. Hence given expression can't be a perfect cube.
+ 
+\end{document}

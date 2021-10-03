@@ -1,0 +1,40 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\begin{document}
+Arpon Basu, School: AECS-4 , Mumbai-400094\\
+%
+Solution for Problem U374 \\
+%
+By actually computing the first few values of $a_{n}$,we observe that $a_{n}<n+\frac{n}{n+1}$.\\
+Thus if we can prove that \\
+$$(\frac{((n+1)^{2}+1)^{2}}{(n+1)^{4}+(n+1)^{2}+1})^{\frac{1}{n+1}}<1+\frac{1}{n+1}$$\\
+then,by applying strong induction we can conclude that $\floor*{a_{n}}=n$ (as then $n+1<a_{n+1}<n+2$).\\
+Now \\
+$$(\frac{((n+1)^{2}+1)^{2}}{(n+1)^{4}+(n+1)^{2}+1})^{\frac{1}{n+1}}<1+\frac{1}{n+1}$$\\
+$$\Leftrightarrow (\frac{((n+1)^{2}+1)^{2}}{(n+1)^{4}+(n+1)^{2}+1})<(1+\frac{1}{n+1})^{n+1} $$\\
+
+
+
+\begin{lemma}
+
+$(\frac{((n+1)^{2}+1)^{2}}{(n+1)^{4}+(n+1)^{2}+1})<2$\\
+Proof\\
+$(\frac{((n+1)^{2}+1)^{2}}{(n+1)^{4}+(n+1)^{2}+1})<2 \Leftrightarrow (n+1)^{4}+1>0$
+\end{lemma}
+Thus \\
+$$2<(\frac{((n+1)^{2}+1)^{2}}{(n+1)^{4}+(n+1)^{2}+1})<(1+\frac{1}{n+1})^{n+1}<e$$\\
+$$\Rightarrow \floor*{a_{n}}=n$$\\
+Thus\\
+$$a_{n}=n+r$$ where $r\in\emph{R}$ and $0\leq r<1$\\
+Hence $$\lim_{n\to\infty}{\frac{a_{n}}{n}}=\lim_{n\to\infty}{1+\frac{r}{n}}=1+\lim_{n\to\infty}{\frac{r}{n}}<1+\lim_{n\rightarrow\infty}{\frac{1}{n}}$$\\
+Since $0\leq r<1$ \\ $$\lim_{n\rightarrow\infty}{\frac{0}{n}}=\lim_{n\to\infty}{\frac{1}{n}}=0$$\\
+By Squeeze theorem (Heine's theorem) we get that $$\lim_{n\to\infty}{\frac{r}{n}}=0$$\\
+Hence,$$\lim_{n\to\infty} \frac{a_{n}}{n}=1+0=1$$ 
+
+ 
+\end{document}

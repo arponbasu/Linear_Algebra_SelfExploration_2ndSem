@@ -1,0 +1,45 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu, School: AECS-4 , Mumbai-400094
+
+Solution for problem U401
+\end{center}
+
+We apply Lagrange Multipliers.Thus our function is to be optimized is $$f(x)=x^xy^yz^z  $$ and constraint $g(x,y,z)  $ is $ x+y+z-3. $ \\
+
+
+
+
+$$ \mathcal{L}(x,y,z,\lambda)=f(x)-\lambda g(x) $$
+
+$$ \Rightarrow \bigtriangledown_{x,y,z,\lambda}\mathcal{L}=0 $$
+$$ \Rightarrow \lambda =x^xy^yz^z(1+\ln(x))  $$ 
+(Cyclic equations hold for $y , z$)
+$$ \therefore x^xy^yz^z(1+\ln(x))=x^xy^yz^z(1+\ln(y))=x^xy^yz^z(1+\ln(z))$$
+
+
+
+ $$ \Rightarrow \ln(x)=\ln(y)=\ln(z) $$
+ $$ \Rightarrow x=y=z $$
+$$ \Rightarrow x=y=z=1 $$
+
+$$ \therefore f(1,1,1)=1 $$
+
+Putting any other $(x,y,z)$ such that $x+y+z=3$ make $f$ greater than 1, confirming that 1 is the global minima of $f$ on $x+y+z=3.$
+
+$$ \therefore f \ge 1 $$
+$$ \Rightarrow x^xy^yz^z \ge 1 $$
+
+Hence Proved.
+
+\end{document}
+
+

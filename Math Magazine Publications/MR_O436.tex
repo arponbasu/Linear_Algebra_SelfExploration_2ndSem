@@ -1,0 +1,66 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu,School: AECS-4,Mumbai-400094
+
+Solution for problem O436
+\end{center}
+
+
+Let $a=x+y$,$b=y+z$,$c=z+x$ where $x,y,z \in R_{\ge 0}$. Then $a,b,c$ follow the triangle inequality .\\
+Also  
+$$ s=\frac{a+b+c}{2}=\frac{(x+y)+(y+z)+(z+x)}{2}=x+y+z$$
+$$ \sin \frac{A}{2}=\sqrt{\frac{(s-b)(s-c)}{bc}}=\sqrt{\frac{xy}{(y+z)(z+x)}}$$
+$$  \sum_{cyclic}\frac{a^2}{\sin(\frac{A}{2})} = \sum_{cyclic} \frac{(x+y)^2}{\sqrt{\frac{xy}{(y+z)(z+x)}}}  $$
+
+$$ =\sqrt{\frac{(x+y)(y+z)(z+x)}{xyz}} \sum_{cyclic} \sqrt{x(y+z)^3}  $$
+
+We now observe that the inequality is homogeneous, so we put $x+y+z=1$
+
+We get 
+
+\begin{align*}
+ \sqrt{\frac{(1-x)(1-y)(1-z)}{xyz}}\sum_{cyclic}\sqrt{x(1-x)^3} \ge 0 &&\text{(To be proved)}
+\end{align*}
+
+Applyying AM-GM inequality 
+$$ \sum_{cyclic}\sqrt{x(1-x)^3} \ge 3 \sqrt[3]{\prod_{cyclic}}\sqrt{x(1-x)^3}  $$
+$$ \prod_{cyclic} \sqrt{\frac{1-x}{x}} \sum_{cyclic} \sqrt{x(1-x)^3} \ge 3 \prod_{cyclic} \frac{(1-x)}{\sqrt[3]{x}} $$
+
+Thus if we can prove that 
+
+\begin{align*}
+ 3\prod_{cyclic}\frac{(1-x)}{\sqrt[3]{x}} \ge \frac{8}{3} &&\text{then we are done} \\
+ \Rightarrow \prod_{cyclic}\frac{(1-x)}{\sqrt[3]{x}} \ge \frac{8}{9}
+\end{align*}
+
+
+
+We define 
+ 
+\begin{align*}
+    \mathcal{L}(x,y,z,\lambda)=\underbrace{\prod_{cyclic}\frac{(1-x)}{\sqrt[3]{x}}}_\text{function to be optimized} -\lambda \underbrace{ (x+y+z-1)}_\text{constraints} &&\text{for applying Lagrange multiplier}   
+\end{align*}
+
+
+\begin{align*}
+ &\Rightarrow \nabla\mathcal{L}=0 \\
+ &\therefore \lambda = -x^{-\frac{4}{3}} \frac{(1-y)(1-z)}{\sqrt[3]{yz}} &\text{(cyclic equation for $y,z$ hold)} \\
+ &\therefore -x^{-\frac{4}{3}} \frac{(1-y)(1-z)}{\sqrt[3]{yz}}=-y^{-\frac{4}{3}} \frac{(1-z)(1-x)}{\sqrt[3]{zx}}=-z^{-\frac{4}{3}} \frac{(1-x)(1-y)}{\sqrt[3]{xy}} \\
+ &\Rightarrow \frac{1-x}{x}=\frac{1-y}{y}=\frac{1-z}{z} \\
+ &\Rightarrow x=y=z \\
+ &\Rightarrow x=y=z=\frac{1}{3} \\
+\end{align*}
+Evaluating $$\prod_{cyclic}\frac{(1-x)}{\sqrt[3]{x}}$$ for $(\frac{1}{3},\frac{1}{3},\frac{1}{3})$, we get the value $\frac{8}{9}$.\\ 
+Putting any other value $(x,y,z)$ subject to $x+y+z=1$ makes $$\prod_{cyclic}\frac{(1-x)}{\sqrt[3]{x}}$$ greater than  $\frac{8}{9}$, implying  $\frac{8}{9}$
+is the global minima on $x+y+z=1$.\\
+Thus $\prod \frac{(1-x)}{\sqrt[3]{x}} \ge \frac{8}{9}$ hence our original inequality is proved.
+
+
+\end{document}

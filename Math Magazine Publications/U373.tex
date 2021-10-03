@@ -1,0 +1,22 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+
+
+\begin{document}
+ 
+Arpon Basu, School: AECS-4 , Mumbai-400094\\
+ 
+Solution for Problem U373 \\
+
+We define $a_{k}=1+\frac{1}{1+2+3+...+k+(k+1)}=1+\frac{2}{k+1}-\frac{2}{k+2}$ ,where  $1\leq k\leq n-1$.\\
+
+Applying the AM-GM inequality to the numbers $a_{1}$,$a_{2}$,$a_{3}$,...,$a_{n-1}$,we get that:-\\
+$(\frac{a_{1}+a_{2}+a_{3}+...+a_{n-1}}{n-1})^{n-1} > a_{1}a_{2}a_{3}...a_{n-1}$ (Note that a strict inequality holds because $a_{1}\neq a_{2}\neq a_{3}\neq ... \neq a_{n-1}$ for $n\geq 2$).\\
+Now,
+$(\frac{a_{1}+a_{2}+a_{3}+...+a_{n-1}}{n-1})^{n-1}=(\frac{(n-1)+2(\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{4}+...+\frac{1}{n}-\frac{1}{n+1})}{n-1})^{n-1}=(1+\frac{1}{2n+2})^{n-1}< (1+\frac{1}{n-1})^{n-1}$.\\
+But,the upper bound of $(1+\frac{1}{n-1})^{n-1}$ as $n\rightarrow \infty $ is $e$,where $e$ is the base of natural logarithms.And since $e<3$,we get that:-\\
+$a_{1}a_{2}a_{3}...a_{n-1}<(\frac{a_{1}+a_{2}+a_{3}+...+a_{n-1}}{n-1})^{n-1}<e<3$.\\ 
+
+ 
+\end{document}

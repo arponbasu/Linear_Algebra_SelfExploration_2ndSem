@@ -1,0 +1,31 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu \\
+School: AECS-4,Mumbai,India,PIN 400094
+
+Solution for problem E-48
+\end{center}
+ $$\cot36^0 \cdot \cot72^0 = \frac{1}{\tan36^0 \cdot \tan72^0} =\frac{1}{\tan (2\cdot18^0) \cdot \tan(90-18)^0} =\frac{1}{ \frac{2\tan18^0}{(1-\tan^2 18^0)}\cot18^0} =\frac{(1-\tan^2 18^0)}{2} $$
+Let $A=18^0 \therefore 5A=90^0 \Rightarrow 3A=90^0 - 2A \Rightarrow \sin(3A)=\sin(90^0 - 2A)=\cos(2A)$
+$$ \sin(3A)=\cos(2A) $$
+$$\Rightarrow  3\sin A - 4\sin^3 A = 1- 2\sin^2 A$$
+$$\Rightarrow   4\sin^3 A- 2\sin^2 A - 3\sin A +1=0$$
+$$\Rightarrow   (\sin A -1)(4\sin^2 A + 2\sin A -1)=0$$
+
+Thus three solutions of the above equation are ${\sin A=1 , \sin A=\frac{\sqrt{5}-1}{4},\sin A= -\frac{\sqrt{5}-1}{4}}$. As $A=18^0$ so only solution is 
+$\sin A=\frac{\sqrt{5}-1}{4}$.
+$$ \tan^2 A = \frac{\sin^2 A}{\cos^2 A}= \frac{\sin^2 A}{1- \sin^2 A}= \frac{(\frac{\sqrt{5}-1}{4})^2}{(1-(\frac{\sqrt{5}-1}{4})^2)}= \frac{(3-\sqrt{5})}{(5+\sqrt{5})}$$
+$$ \therefore (1-\tan^2 A) =(1-\tan^2 18^0)=(1-\frac{(3-\sqrt{5})}{(5+\sqrt{5})})=\frac{(2+2\sqrt{5})}{(5+\sqrt{5})}=\frac{2(1+\sqrt{5})}{{(5+\sqrt{5})}}=\frac{2}{\sqrt{5}}$$
+$$ \therefore \cot36^0 \cdot \cot72^0 = \frac{(1-\tan^2 18^0)}{2}=\frac{1}{\sqrt{5}}=\frac{\sqrt{5}}{5} $$
+
+\end{document}
+
+
+

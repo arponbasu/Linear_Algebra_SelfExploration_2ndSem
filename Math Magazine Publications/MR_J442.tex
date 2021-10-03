@@ -1,0 +1,157 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu,School: AECS-4,Mumbai-400094
+
+Solution for problem J442
+\end{center}
+
+We use barrycentric coordinates.
+let $$A:(1,0,0) $$
+    $$B:(0,1,0) $$
+    $$C:(0,0,1) $$
+
+Where $\triangle ABC$ is our reference triangle.
+
+$$ \therefore \hspace{10pt} O:(\frac{1}{3},\frac{1}{3},\frac{1}{3}) $$
+where $O$ is the centre of triangle.\\
+Let $M$ be $(1-t,t,0)$ where $t \in \mathbb{R}$. We note that $M \in \overleftrightarrow{AB}$ \\
+$ \because M,O,N $ are collinear , 
+
+\begin{center}
+ \begin{math}
+ \begin{vmatrix}
+  1-t & t & 0\\
+  \frac{1}{3} & \frac{1}{3} & \frac{1}{3}\\
+  X_{N} & Y_{N} & Z_{N}
+\end{vmatrix}=0
+\end{math}
+\end{center}
+
+
+
+$ \because N \in \overleftrightarrow{AC} , Y_{N}=0 $  solving for $ X_{N} , Z_{N}$ we get $N:(2t-1:0:t)$ \\
+
+$ \therefore \overleftrightarrow{BN}$ is represented by 
+
+\begin{center}
+\begin{math}
+ \begin{vmatrix}
+  0 & 1 & 0\\
+  (2t-1) & 0 & t \\
+ x & y & z
+\end{vmatrix}=0 
+\end{math}
+\vspace{5pt} \\
+\begin{math}
+\Rightarrow tx+(1-2t)z=0
+\end{math}
+\end{center}
+
+
+
+$ \overleftrightarrow{CM}$ is represented by 
+
+\begin{center}
+\begin{math}
+ \begin{vmatrix}
+  0 & 0 & 1\\
+  (1-t) & t & 0 \\
+ x & y & z
+\end{vmatrix}=0 
+\end{math}
+\vspace{5pt} \\
+\begin{math}
+\Rightarrow tx+(1-t)y=0
+\end{math}
+\end{center}
+
+
+\begin{equation}
+\begin{split}
+  \therefore k &=\overleftrightarrow{BN} \cap \overleftrightarrow{CM} \\
+               &= \big((1-t)(2t-1):t(2t-1):t(1-t)\big)
+\end{split}
+\end{equation}
+
+
+\begin{center}
+\begin{math}
+ \therefore \overleftrightarrow{AK}:
+\begin{vmatrix}
+  1 & 0 & 0\\
+  (1-t)(2t-1) & t(2t-1) & t(1-t) \\
+   x & y & z
+\end{vmatrix}=0 
+\end{math}
+\vspace{5pt} \\
+\begin{math}
+\Rightarrow (1-t)y+(1-2t)z=0
+\end{math}
+\end{center}
+
+
+Also
+\begin{center}
+\begin{math}
+ \overleftrightarrow{BO}:
+\begin{vmatrix}
+  0 & 1 & 0\\
+  \frac{1}{3} & \frac{1}{3} & \frac{1}{3} \\
+   x & y & z
+\end{vmatrix}=0 
+\end{math}
+\vspace{5pt} \\
+\begin{math}
+\Rightarrow (x-z)=0
+\end{math}
+\end{center}
+
+
+
+\begin{equation}
+\begin{split}
+  \therefore P &=\overleftrightarrow{AK} \cap \overleftrightarrow{BO} \\
+             & = \big((1-t),(2t-1),(1-t)\big)
+\end{split}
+\end{equation}
+
+
+$\therefore $ the displacement vectors are 
+
+
+\begin{center}
+\begin{math}
+ \overrightarrow{MB}=\big((1-t),(t-1),0\big)
+\end{math}
+\end{center}
+
+
+\begin{center}
+\begin{math}
+ \overrightarrow{MP}=\big(0,(1-t),(t-1)\big)
+\end{math}
+\end{center}
+
+\begin{center}
+\begin{equation}
+\begin{split}
+&\therefore |\overrightarrow{MB}|^2 = -a^2yz - b^2zx -c^2xy = c^2(1-t)^2  \\
+&\therefore |\overrightarrow{MP}|^2 = -a^2(1-t)(t-1)=a^2(1-t)^2 
+\end{split}
+\end{equation}
+\end{center}
+
+$\because \triangle ABC$ is equilateral $\therefore a=c \Rightarrow MB=MP $ \\
+
+\textbf{Hence Proved}
+
+Note: Our proof works exactly even if only  $BC=A$ as the centroid
+ 
+\end{document}

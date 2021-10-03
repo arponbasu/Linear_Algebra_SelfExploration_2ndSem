@@ -1,0 +1,43 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu, School: AECS-4 , Mumbai-400094
+
+Solution for problem O397
+\end{center}
+
+We have to prove that $\sqrt{\frac{9a+b}{9b+a}} + \sqrt{\frac{9b+c}{9c+b}}+ \sqrt{\frac{9c+a}{9a+c}} \ge 3$  $ \forall a,b,c \in R^+$ \\
+Putting $b=ax,c=by $ where $ x,y \in R^+ $ we get that \\
+
+$$\sqrt{\frac{9a+b}{9b+a}} + \sqrt{\frac{9b+c}{9c+b}}+ \sqrt{\frac{9c+a}{9a+c}} $$
+$$=\sqrt{\frac{9a+ax}{9ax+a}} + \sqrt{\frac{9ax+axy}{9axy+ax}}+ \sqrt{\frac{9axy+a}{9a+axy}} $$
+$$=\sqrt{\frac{x+9}{9x+1}} + \sqrt{\frac{y+9}{9y+1}}+ \sqrt{\frac{9xy+1}{xy+9}} $$
+We define $f(x,y)=\sqrt{\frac{x+9}{9x+1}} + \sqrt{\frac{y+9}{9y+1}}+ \sqrt{\frac{9xy+1}{xy+9}}$
+$$ \therefore \dfrac{\delta f}{\delta x}=40 \bigg(\dfrac{y}{\sqrt{(9xy+1)(xy+9)^3}} \bigg)-\bigg(\dfrac{1}{\sqrt{(x+9)(9x+1)^3}}\bigg) $$
+Note that we get the expression for $\dfrac{\delta f}{\delta x}$ if we plug in $y$ in place of $x$.
+$$ \therefore \dfrac{\delta f}{\delta x}=0 \Rightarrow y=rx $$ for some $r\in R^+$ \\
+$$ \Rightarrow r=\pm 1 \Rightarrow x=\pm y  $$
+$$ \because x,y >0 \Rightarrow x=y $$
+Considering $y$ as constant, we find $min f(x,y) $ for $ x\in R^+ $\\
+$$ \therefore  \dfrac{\delta f}{\delta x}|_{x=y}=0 \Rightarrow \frac{x}{\sqrt{(x+9)(9x+1)^3}}=\frac{1}{\sqrt{(x+9)(9x+1)^3}} $$
+$$\Rightarrow x^2 (x+9)(9x+1)^3 -(9x^2+1)(x^2+9)^{3}=0 $$
+Using Wolfram Alpha, one can check that the only positive real roots of above equation are 1 and $\alpha$  where $\alpha \approx 0.09 $. Also note that $f(1,1) =3 $
+while $f(\alpha , \alpha) >3 = f(1,1)$
+Similarly , considering $x$ as a constant, we get $min f(x,y) =f(1,1)$ for $ y\in R^+ $. Checking any other value of $f(x,y)$ say $f(2,3) \approx 3.330$ varifies that 
+$f(1,1)$ is indeed the minima of $f(x,y)$
+$$ \therefore \sqrt{\frac{9a+b}{9b+a}} + \sqrt{\frac{9b+c}{9c+b}}+ \sqrt{\frac{9c+a}{9a+c}} \ge 3 $$ and equality occurs iff $x=y=1$, that is $b=a , c=b \therefore a=b=c$
+
+
+
+
+
+
+\end{document}
+
+

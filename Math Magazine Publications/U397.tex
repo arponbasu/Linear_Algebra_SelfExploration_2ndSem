@@ -1,0 +1,41 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu, School: AECS-4 , Mumbai-400094
+
+Solution for problem U397
+\end{center}
+
+We know that $T_{n}=\frac{(n)(n+1)}{2}$
+$$(8T_{n}-3)(8T_{n+1}-3) = (4n^2+4n-3)(4n^2+12n+5) $$ 
+$$=(n+\frac{3}{2})(n-\frac{1}{2})(n+\frac{5}{2})(n+\frac{1}{2}) $$ 
+$$=\frac{(2n+3)(2n-1)(2n+5)(2n+1)}{16} $$
+$$\therefore 16 \frac{1}{(8T_{n}-3)(8T_{n+1}-3)} = \frac{16}{(2n+3)(2n-1)(2n+5)(2n+1)} $$
+$$= \frac{4}{(2n+5)(2n+1)} \frac{4}{(2n+3)(2n-1)}   $$
+$$= \Big(\frac{1}{(2n+1)}-\frac{1}{(2n+5)}\Big) \Big(\frac{1}{(2n-1)}-\frac{1}{(2n+3)}\Big)   $$
+After algebraic manipulation we obtain 
+$$16 \frac{1}{(8T_{n}-3)(8T_{n+1}-3)} = \frac{1}{3}\Big(\frac{1}{2n-1}-\frac{1}{2n+5}\Big) + \Big(\frac{1}{2n+3}-\frac{1}{2n+1}\Big) $$
+
+$$\therefore \sum_{n \ge 1} \frac{16}{(8T_{n}-3)(8T_{n+1}-3)} = \frac{1}{3} \sum_{n \ge 1} \Big(\frac{1}{2n-1} \Big) 
+                                                               - \frac{1}{3} \sum_{n \ge 1} \Big(\frac{1}{2n+5} \Big)
+                                                                + \sum_{n \ge 1} \Big(\frac{1}{2n+3} \Big)
+                                                                 - \sum_{n \ge 1} \Big(\frac{1}{2n+1} \Big)$$
+$$=\frac{1}{3}\big[\big(\frac{1}{1}+\frac{1}{3}+\frac{1}{5} +\frac{1}{7} \dots \big)- \big(\frac{1}{7}+ \dots \big)\big] 
+   + \big[\big(\frac{1}{5}+\frac{1}{7}+\frac{1}{9} +\frac{1}{11} \dots \big)- \big(\frac{1}{3}+ \frac{1}{5} + \frac{1}{7} \dots \big)\big]$$
+
+$$ = \frac{1}{3}\big[\frac{1}{1}+\frac{1}{3}+\frac{1}{5}\big] +  \big[\frac{-1}{3}\big]$$
+$$ = \frac{1}{3}\big[\frac{1}{3}+\frac{1}{5}\big] $$
+$$=\frac{1}{3} \frac{8}{15} = \frac{8}{45} $$
+$$\therefore \sum_{n \ge 1} \frac{16}{(8T_{n}-3)(8T_{n+1}-3)} = \frac{8}{45} $$ 
+$$ \Rightarrow \sum_{n \ge 1} \frac{1}{(8T_{n}-3)(8T_{n+1}-3)} = \frac{1}{90} $$
+
+
+\end{document}
+
+

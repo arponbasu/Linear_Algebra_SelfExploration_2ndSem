@@ -1,0 +1,15 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+
+
+\begin{document}
+Arpon Basu, School: AECS-4 , Mumbai-400094\\
+Solution for Problem O373 \\
+We observe that any $(n-1)\times (n-1)$ square in a $n\times n$ always contains the central $(n-2)\times (n-2)$ square,that is the square which remains if we delete all those $1\times 1$ squares whose sides are part of the perimeter of the $n\times n$ square.\\
+Thus,whenever we increase the entries of a $(n-1)\times (n-1)$ square by $\pm 1$,all the entries in the central square always remain the same because the initial entries were all equal (to 0).\\
+If we want all numbers from $1$ to $n^{2}$ in the $n\times n$ square,then at least in the final stage the entries in the $(n-2)\times (n-2)$ square should be different from each other.\\
+But,as shown above,that's not possible.\\
+Thus,it's impossible to obtain all numbers from 1 to $n^{2}$ in the $n\times n$ square after a finite number of operations. 
+ 
+\end{document}

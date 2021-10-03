@@ -1,0 +1,36 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu,School: AECS-4,Mumbai-400094
+
+Solution for problem J439
+\end{center}
+\textbf{We claim that} $\mathbf{ (x,y,z) = (1,1,1),(-1,-1,-1)}$ \textbf{are the only solutions.}\\
+
+
+We subtract the third equation from sum of first two equations.
+
+
+\begin{equation*}
+\begin{split}
+(2x^2-3xy+2y^2)+(y^2-3xy+4y^2)-(z^2+3zx-x^2)&=1+2-3 \\
+                                            &=0 \\
+\Rightarrow 3(x^2+y^2+z^2-xy-yz-zx)=0 \\
+\Rightarrow (x-y)^2+(y-z)^2+(z-x)^2=0 \\
+\therefore (x-y)=(y-z)=(z-x)=0 \\
+\Rightarrow x=y=z
+\end{split}
+\end{equation*}
+
+Putting $x=y=z$ in all the three given equation we obtain $x^2=y^2=z^2=1$\\
+$\mathbf{\therefore (x,y,z) = (1,1,1),(-1,-1,-1)}$ \textbf{are the only solutions.} \\
+Plugging these solutions in the three given equations we verify that they work.
+
+
+\end{document}

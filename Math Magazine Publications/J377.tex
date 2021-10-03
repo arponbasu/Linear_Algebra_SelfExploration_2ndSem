@@ -1,0 +1,28 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+
+
+\begin{document}
+ 
+Arpon Basu, School: AECS-4 , Mumbai-400094\\
+ 
+Solution for Problem J377 \\
+
+We know that $sin^{2} \frac{A}{2}=\frac{1-cosA}{2}$.Hence the statement to be proved is $\frac{m_{a}}{R}\geq (1-cosA) $.\\
+Now,we know that $m_{a}=\frac{\sqrt{2b^{2}+2c^{2}-a^{2}}}{2}$.\\
+Using the cosine law to substitute for $a^{2}$,we get that $m_{a}=\frac{\sqrt{b^{2}+c^{2}+2bccosA}}{2}$.\\
+Also,using the extended sine law,we substitute $\frac{a}{2sinA}$ for $R$.\\
+Thus the statement to be proved reduces to:-\\
+$\frac{\sqrt{b^{2}+c^{2}+2bccosA}}{\frac{a}{sinA}}\geq 1-cosA\Leftrightarrow (b^{2}+c^{2}+2bccosA)(sin^{2}A)\geq a^{2}(1+cos^{2}A-2cosA)$
+$\Leftrightarrow b^{2}sin^{2}A+c^{2}sin^{2}A+2bccosAsin^{2}A\geq (b^{2}+c^{2}-2bccosA)(1+cos^{2}A-2cosA)=b^{2}+c^{2}-2bccosA+b^{2}cos^{2}A+c^{2}cos^{2}A-2bccos^{3}A-2b^{2}cosA-2c^{2}cosA+4bccos^{2}A$\\
+Shifting everything to the RHS of the inequality,simplifying the resulting expression and factoring out $cosA$,we get:-\\
+$0\geq (-2)(cosA)(1-cosA)(b-c)^{2}$.\\
+But,since $A\in (0,\frac{\pi}{2}]$, $cosA\geq 0$. Also,since $(1-cosA)$ and $(b-c)^{2}$ are always non-negative,it's obvious that the inequality $0\geq (-2)(cosA)(1-cosA)(b-c)^{2}$ is true because $-2$ is negative.\\
+For the upper bound,we know that $cos^{2}\frac{A}{2}=\frac{1+cosA}{2}$.So replacing $1-cosA$ with $1+cosA$ and simplifying as above,we get:-\\
+$0\leq 2(cosA)(1+cosA)(b-c)^{2}$.Again,since all of the terms $cosA$,$(1+cosA)$ and $(b-c)^{2}$ are non-negative,and since 2 is positive,we see that this inequality is also true.\\
+Note that in both the inequalities,equality occurs when $A=\frac{\pi}{2}$,when $cosA=0$.\\
+
+
+ 
+\end{document}

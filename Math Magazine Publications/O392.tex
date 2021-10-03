@@ -1,0 +1,46 @@
+\documentclass[10pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=6mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu, School: AECS-4 , Mumbai-400094
+
+Solution for problem O392 
+\end{center}
+
+
+
+
+
+
+
+We know that $r_{a}=\frac{\bigtriangleup}{(s-a)}$ , $r_{b}=\frac{\bigtriangleup}{(s-b)}$ and $r_{c}=\frac{\bigtriangleup}{(s-c)}$ where $s$ is semi perimeter.\\
+$$\therefore \frac{1}{r_{a}}=\frac{(s-a)}{\bigtriangleup} \Rightarrow \frac{1}{r_{a}h_{a}}=\frac{(s-a)}{{\bigtriangleup}{h_{a}}}$$ 
+$$\therefore \sum{ \frac{1}{r_{a}h_{a}}}=\sum \frac{(s-a)}{{\bigtriangleup}{h_{a}}}=\frac{1}{\bigtriangleup}(\sum \frac{(s-a)}{h_{a}})$$
+Now $$\frac{(s-a)}{{h_{a}}}=\frac{(\frac{b+c-a}{2})}{\frac{2 \bigtriangleup}{a}}=\frac{a(b+c-a)}{4 \bigtriangleup}$$ 
+$$ \sum \frac{1}{r_{a}h_{a}}= \frac{1}{4{\bigtriangleup}^{2}} \sum  [(a)(b+c-a)]$$
+$$= \frac{1}{4{\bigtriangleup}^{2}}[2(ab+bc+ca)-(a^{2}+b^{2}+c^{2})]$$
+$$=\frac{1}{4{\bigtriangleup}^{2}}[a^{2}+b^{2}+c^{2}-(a-b)^{2}-(b-c)^{2} - (c-a)^{2}]$$ 
+Now,by Hadwiger Finsler inequality , we know that 
+$$a^{2}+b^{2}+c^{2}-(a-b)^{2} -(b-c)^{2} -(c-a)^{2} \geq 4\sqrt{3}\bigtriangleup$$ 
+$\therefore  \sum \frac{1}{r_{a}h_{a}} \geq \frac{4\sqrt{3}\bigtriangleup}{4{\bigtriangleup}^{2}}=\frac{\sqrt{3}}{\bigtriangleup}$.(Proved)\\
+ 
+Now $$\frac{1}{3r^{2}}=\frac{1}{3({\frac{\bigtriangleup}{s}})^{2}}=\frac{1}{3} (\frac{s}{\bigtriangleup})^2$$ 
+
+We have to prove that $$ \frac{1}{3r^{2}} \geq \sum \frac{1}{r_{a}h_{a}}$$
+$$  \Longleftrightarrow \frac{s^2}{3} \geq \frac{1}{4} \sum{[a(b+c-a)]}$$
+$$ \Longleftrightarrow 4s^{2} \geq 3 \sum {[a(b+c-a)]} $$
+$$\Longleftrightarrow (a+b+c)^{2} \geq 3[2(ab+bc+ca)-(a^2 + b^2 + c^2)]  $$
+
+After algebraic manipulation we get $$ (a^2 +b^2 +c^2) \geq (ab+bc+ca) $$ But it is obviously true. Equalities occur, in both inequalities iff $$a=b=c $$ that is iff $\bigtriangleup$ABC is equilateral.
+
+
+
+
+
+
+\end{document}
